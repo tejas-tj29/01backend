@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "mongoose": "^9.1.2"
+  },
+  "name": "backend-mega-proj",
+  "version": "1.0.0",
+  "description": "This is my advanced backend  project ",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Tejas Jhunjhunwala",
+  "license": "ISC"
+}
