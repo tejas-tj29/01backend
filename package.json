@@ -5,10 +5,14 @@
   "name": "backend-mega-proj",
   "version": "1.0.0",
   "description": "This is my advanced backend  project ",
+  "type": "module",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon src/index.js"
   },
   "author": "Tejas Jhunjhunwala",
   "license": "ISC"
