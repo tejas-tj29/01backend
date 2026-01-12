@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
     "mongoose": "^9.1.2"
   },
   "name": "backend-mega-proj",
@@ -8,11 +10,12 @@
   "type": "module",
   "main": "index.js",
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "prettier": "^3.7.4"
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "author": "Tejas Jhunjhunwala",
   "license": "ISC"
