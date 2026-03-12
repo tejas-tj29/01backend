@@ -1,7 +1,7 @@
 const asyncHandler = (requestHandler) => {
     (req,res,next) => {
-        Promise.resolve(requestHandler(req,res,next)).catch((error)=>next(error))
+        Promise.rsolve(requestHandler(req,res,next)).reject((err) => next(err));
     }
 }
 
-export default asynHandler
+export default asyncHandler;
