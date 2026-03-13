@@ -47,7 +47,15 @@ const userSchema = new Schema({
 },{timestamps:true})
 
 userSchema.pre("save",async function(next){
-    this.password = bacrypt.hash(this.password,10);
-})//(Here we have to write callback but never use arrow fn since this cannot get reference inside arrow fn)
+    if(!this.isModified("password"))
+        return next();
+    this.password = bcrypt.hash(this.password,10);
+    next();
+})
+
+userSchema.methods.isPasswordCorrect = async function(password){
+    return await bcrypt.compare(password,this.password)
+}
+
 
 export const User = mongoose.model("User",userSchema);
